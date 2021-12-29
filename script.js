@@ -548,19 +548,19 @@ function init() {
     svg.style.cursor = "url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/127738/cross.png) 20 20, auto";
   }
 
-  function unZoom() {
-    zoom = false;
-    svg.style.cursor = "auto";
-    TweenMax.to(svg, 2, {attr: {viewBox: "0 0 1600 900"}, ease: Power3.easeOut});
-  }
+  // function unZoom() {
+  //   zoom = false;
+  //   svg.style.cursor = "auto";
+  //   TweenMax.to(svg, 2, {attr: {viewBox: "0 0 1600 900"}, ease: Power3.easeOut});
+  // }
 
-  var overlays = svg.querySelectorAll("#overlays > g");
-  for (var i = 0; i < overlays.length; i++) {
-    overlays[i].addEventListener("mouseenter", enterOverlay);
-    overlays[i].addEventListener("mouseleave", leaveOverlay);
-    overlays[i].addEventListener("click", zoomViewBox);
-  }
-  svg.addEventListener("click", unZoom);
+  // var overlays = svg.querySelectorAll("#overlays > g");
+  // for (var i = 0; i < overlays.length; i++) {
+  //   overlays[i].addEventListener("mouseenter", enterOverlay);
+  //   overlays[i].addEventListener("mouseleave", leaveOverlay);
+  //   // overlays[i].addEventListener("click", zoomViewBox);
+  // }
+  // svg.addEventListener("click", unZoom);
 
   document.querySelector(".gift").addEventListener("click", openBox);
   document.body.style.background = "#bfe2dc";
@@ -585,12 +585,19 @@ window.onload = function () {
 const gift = document.querySelector('.gift')
 const scene = document.querySelector('.scene')
 const tags = document.querySelector('.tags')
+const overlays = document.querySelector('.overlays')
+const support = document.querySelector('.support')
 
 gift.addEventListener('click', () => {
+  setTimeout(() => {
+    support.style.opacity = .8
+  }, 2000)
+
   setTimeout(() => {
     scene.style.transition = 'all 2s'
     scene.style.opacity = 0
     tags.style.transition = 'all 2s'
     tags.style.opacity = 1
+    support.style.opacity = 0
   }, 11000)
 })
