@@ -90,10 +90,10 @@ a:hover {
     transition: transform 1s, -webkit-transform 1s;
 }
 
-.tag-container:hover .tag {
+/* .tag-container:hover .tag {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
-}
+} */
 
 .tag-side {
     width: 100%;
@@ -514,23 +514,26 @@ a:hover {
 
 .support {
     position: absolute;
-    bottom: 15%;
+    bottom: 38%;
     left: 50%;
     transform: translateX(-50%);
     color: #1d1f3f;
-    font-size: 2.25rem;
+    font-size: 4.3rem;
     opacity: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0 10px;
     transition: all 2s;
 }
 
 .image__person {
-    width: 100%;
+    width: 90%;
     box-shadow: 0 0 5px #87c4a5da;
     border-radius: 5px;
 }
 
 .person__text {
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
 }
 
 
@@ -544,9 +547,9 @@ html {
 }
 
 @media only screen and (max-width: 77.5em) {
-  /* html {
+  html {
     font-size: 50%;
-  } */
+  }
 
   .tags {
     padding: 0 20px 70px 20px !important;
