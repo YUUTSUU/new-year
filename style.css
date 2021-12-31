@@ -90,8 +90,9 @@ a:hover {
     transition: transform 1s, -webkit-transform 1s;
 }
 
-/* .tag-container:hover .tag {
-    -webkit-transform: rotateY(180deg);
+/* 
+.tag-container:hover .tag {
+    -webkit-transform: rotateY(180deg) !important;
     transform: rotateY(180deg);
 } */
 
@@ -112,7 +113,7 @@ a:hover {
 }
 
 .tag-side.is-back {
-    -webkit-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg) !important;
     transform: rotateY(180deg);
     z-index: 2;
 }
@@ -385,7 +386,7 @@ a:hover {
     border-top-left-radius: 10px;
     border-top-right-radius: 30px;
     display: block;
-    -webkit-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg) !important;
     transform: rotate(45deg); 
 }
 
@@ -398,7 +399,7 @@ a:hover {
     padding-top: 30px;
     position: relative;
     z-index: 1;
-    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0) !important;
     transform: translate3d(0, 0, 0);
 }
 
@@ -418,16 +419,16 @@ a:hover {
     left: 50px;
     right: 50px;
     -webkit-transform: skew(
--45deg) translate3d(0, 0, 0);
+-45deg) translate3d(0, 0, 0) !important;
     transform: skew(
 -45deg) translate3d(0, 0, 0);
-    -webkit-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0 !important;
     transform-origin: 0 0;
 }
 
 .tag-5-side:after {
     -webkit-transform: skew(
-45deg);
+45deg) !important;
     transform: skew(
 45deg);
 }
@@ -467,7 +468,7 @@ a:hover {
     position: absolute;
     top: 0;
     left: 50%;
-    -webkit-transform: translate3d(-50%, 0, 0);
+    -webkit-transform: translate3d(-50%, 0, 0) !important;
     transform: translate3d(-50%, 0, 0);
 } 
 .tag-6-side:after {
@@ -481,7 +482,7 @@ a:hover {
     top: 0;
     left: 50%;
     z-index: 1;
-    -webkit-transform: translate3d(-50%, -50%, 0);
+    -webkit-transform: translate3d(-50%, -50%, 0) !important;
     transform: translate3d(-50%, -50%, 0);
 }
 .box-section {
@@ -514,11 +515,11 @@ a:hover {
 
 .support {
     position: absolute;
-    bottom: 38%;
+    bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
     color: #1d1f3f;
-    font-size: 4.3rem;
+    font-size: 4rem;
     opacity: 0;
     width: 100%;
     text-align: center;
@@ -527,23 +528,64 @@ a:hover {
 }
 
 .image__person {
-    width: 90%;
     box-shadow: 0 0 5px #87c4a5da;
     border-radius: 5px;
 }
 
-.person__text {
-    font-size: 1.2rem !important;
+.image__person_1 {
+    width: 70%;
 }
 
+.image__person_2 {
+    width: 70%;
+}
+
+.image__person_3 {
+    width: 65%;
+}
+
+.image__person_4 {
+    width: 90%;
+}
+
+.image__person_5 {
+    width: 80%;
+}
+
+.image__person_6 {
+    width: 90%;
+}
+
+.person__text {
+    font-size: 1.2rem !important;
+    font-family: Arial, sans-serif !important;
+}
+
+.person__name {
+    margin: 3px 0;
+}
 
 .audio {
     opacity: 0;
 }
 
+.tag-1-text {
+    padding-top: 10px !important;
+}
+
+.tag-3-text {
+    padding-top: 25px !important;
+}
+
+
+.tag-3-side {
+    margin-top: 0 !important;
+}
+
 
 html {
     font-size: 62.5%;
+    /* font-family: Arial, Helvetica, sans-serif !important; */
 }
 
 @media only screen and (max-width: 77.5em) {
@@ -559,12 +601,41 @@ html {
     height: 600px;
     width: 400px;
 }
+
+.support {
+    font-size: 3.8rem;
+    bottom: 24%;
+}
+
+   .person__text {
+    font-size: 1.8rem !important;
+}
 }
 
 
 @media only screen and (max-width: 40.62em) {
-    .person__text {
+    /* .person__text {
     font-size: 1.8rem !important;
+} */
+
+.support {
+    font-size: 3.5rem;
+    bottom: 26%;
+}
 }
 
+
+
+@media only screen and (max-width: 50em) {
+    .support {
+    font-size: 3.4rem;
+    bottom: 28%;
+}
+}
+
+@media only screen and (max-width: 31.25em) {
+    .support {
+    font-size: 3rem;
+    bottom: 30%;
+}
 }
